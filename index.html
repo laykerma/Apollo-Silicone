@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue Sản Phẩm | Apollo Silicone - Quốc Huy Anh Corp</title>
+    <meta name="description" content="Trang trưng bày sản phẩm chính thức Apollo Silicone - Quốc Huy Anh Corp. Keo Silicone A100, A200, A250, A300, A500, A600, Apollo Foam và hệ thống Dowsil™.">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        apollo: {
+                            navy: '#003B73',
+                            blue: '#0056A6',
+                            red: '#D9232E',
+                            light: '#F8FAFC',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @keyframes modalPop {
+            from { opacity: 0; transform: scale(0.96) translateY(8px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .animate-modal {
+            animation: modalPop 0.22s ease-out forwards;
+        }
+        /* Subtle custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="font-sans bg-[#F8FAFC] text-slate-800 antialiased selection:bg-[#0056A6] selection:text-white">
+
+    <!-- ================= 1. HEADER & STICKY NAVBAR ================= -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-[#003B73] to-[#0056A6] flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-layer-group text-xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-lg sm:text-xl font-extrabold tracking-tight text-[#003B73] leading-none">
+                            APOLLO <span class="text-[#D9232E]">SILICONE</span>
+                        </span>
+                        <span class="text-[11px] sm:text-xs font-semibold text-slate-500 tracking-wider uppercase mt-0.5">
+                            Quốc Huy Anh Corp
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="#san-pham" class="text-sm font-semibold text-slate-700 hover:text-[#0056A6] transition-colors">Sản phẩm</a>
+                    <a href="#gioi-thieu" class="text-sm font-semibold text-slate-600 hover:text-[#0056A6] transition-colors">Giới thiệu</a>
+                    <a href="#ky-thuat" class="text-sm font-semibold text-slate-600 hover:text-[#0056A6] transition-colors">Kỹ thuật thi công</a>
+                    <a href="#cong-trinh" class="text-sm font-semibold text-slate-600 hover:text-[#0056A6] transition-colors">Công trình &amp; Cộng đồng</a>
+                </nav>
+
+                <!-- Desktop CTA & Mobile Menu Button -->
+                <div class="flex items-center gap-3">
+                    <button onclick="openQuoteModal('')" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#D9232E] hover:bg-red-700 text-white text-sm font-semibold shadow-md shadow-red-600/20 transition-all active:scale-95">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <span>Liên Hệ Báo Giá</span>
+                    </button>
+                    <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 focus:outline-none" aria-label="Mở menu">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 pt-3 pb-5 space-y-2 shadow-lg">
+            <a href="#san-pham" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-[#0056A6]">Sản phẩm trưng bày</a>
+            <a href="#gioi-thieu" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-[#0056A6]">Giới thiệu</a>
+            <a href="#ky-thuat" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-[#0056A6]">Kỹ thuật thi công</a>
+            <a href="#cong-trinh" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-[#0056A6]">Công trình &amp; Cộng đồng</a>
+            <div class="pt-2">
+                <button onclick="toggleMobileMenu(); openQuoteModal('')" class="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#D9232E] text-white text-sm font-semibold shadow-md">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span>Liên Hệ Báo Giá Ngay</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= 2. HERO SECTION ================= -->
+    <section class="relative pt-28 pb-20 lg:pt-36 lg:pb-28 overflow-hidden bg-gradient-to-br from-[#001D3D] via-[#003B73] to-[#0056A6] text-white">
+        <!-- Decorative Background Elements -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+            </svg>
+        </div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-[#D9232E]/25 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-sky-400/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                <!-- Hero Left Content -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-xs sm:text-sm font-medium text-sky-100">
+                        <span class="w-2 h-2 rounded-full bg-[#D9232E] animate-pulse"></span>
+                        <span>E-Catalogue Trưng Bày Sản Phẩm • Quốc Huy Anh Corp</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+                        Một Lần Chạm Là <span class="text-sky-300">Một Đời Gắn Kết</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl">
+                        Giải pháp toàn diện ngành <strong class="text-white">Keo Silicone &amp; Hóa Chất Xây Dựng</strong>. Hợp tác chiến lược cùng <strong class="text-white">Dow Chemical (Hoa Kỳ)</strong> và <strong class="text-white">ShinEtsu (Nhật Bản)</strong> — 100% nguyên liệu nhập khẩu nguyên đai nguyên kiện.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="#san-pham" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#D9232E] hover:bg-red-700 text-white font-semibold shadow-lg shadow-red-900/30 transition-all hover:-translate-y-0.5">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                            <span>Xem Danh Mục Sản Phẩm</span>
+                        </a>
+                        <a href="#ky-thuat" onclick="switchTechTab('tab-steps')" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/25 text-white font-semibold backdrop-blur-sm transition-all">
+                            <i class="fa-solid fa-list-check"></i>
+                            <span>Hướng dẫn thi công 8 bước</span>
+                        </a>
+                    </div>
+
+                    <!-- Strategic Partners Strip -->
+                    <div class="pt-6 border-t border-white/15 flex flex-wrap items-center gap-5 text-sm">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-white rounded-lg px-2.5 py-1.5 shadow-sm">
+                                <img src="assets/images/dowsil-logo.jpg" alt="DOWSIL silicones by Dow" class="h-7 w-auto object-contain">
+                            </div>
+                            <div>
+                                <div class="font-bold text-white leading-tight">Dow Chemical</div>
+                                <div class="text-xs text-sky-200">Tập đoàn Hóa chất Hoa Kỳ</div>
+                            </div>
+                        </div>
+                        <div class="hidden sm:block w-px h-9 bg-white/20"></div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-white/15 border border-white/20 flex items-center justify-center text-sky-200 font-bold">
+                                <i class="fa-solid fa-atom text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-white leading-tight">ShinEtsu</div>
+                                <div class="text-xs text-sky-200">Tập đoàn Hóa chất Nhật Bản</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right Visual Showcase (Real A300 Hero Image) -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl overflow-hidden border border-white/20 shadow-2xl bg-[#04142B] group">
+                        <img
+                            src="assets/images/hero-a300.jpg"
+                            alt="Apollo Silicone Sealant A300 - Vua keo kính"
+                            class="w-full h-[380px] sm:h-[430px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                        >
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#001833] via-transparent to-transparent"></div>
+                        <!-- Top Floating Badge -->
+                        <div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-xs font-bold text-white">
+                                <i class="fa-solid fa-crown text-amber-300 mr-1"></i> Sản phẩm biểu tượng
+                            </span>
+                            <span class="px-3 py-1 rounded-full bg-[#D9232E] text-white text-xs font-bold shadow">
+                                100% Nhập khẩu
+                            </span>
+                        </div>
+                        <!-- Bottom Info Bar -->
+                        <div class="absolute bottom-0 inset-x-0 p-5 sm:p-6">
+                            <div class="flex items-end justify-between gap-4">
+                                <div>
+                                    <p class="text-xs uppercase tracking-widest text-sky-300 font-bold">Vua Keo Kính Việt Nam</p>
+                                    <h3 class="text-xl sm:text-2xl font-extrabold text-white mt-0.5">Apollo Silicone A300</h3>
+                                    <p class="text-xs text-slate-300 mt-1">Độ đàn hồi &amp; bám dính cực cao • Dung tích 300ml</p>
+                                </div>
+                                <button onclick="openProductModal('a300')" class="shrink-0 px-4 py-2 rounded-xl bg-white text-[#003B73] hover:bg-sky-100 text-xs font-bold shadow transition-colors">
+                                    Chi tiết <i class="fa-solid fa-arrow-right ml-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 3. DANH MỤC SẢN PHẨM TRƯNG BÀY ================= -->
+    <section id="san-pham" class="py-16 lg:py-24 bg-[#F8FAFC]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-[#D9232E]">Catalogue Sản Phẩm</span>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#003B73] mt-1">
+                        Trưng Bày Sản Phẩm Chủ Lực
+                    </h2>
+                    <p class="text-sm text-slate-600 mt-2 max-w-2xl">
+                        Tra cứu nhanh thông số, đặc tính kỹ thuật và ứng dụng thực tế của các dòng keo Apollo Silicone, Apollo Foam và Dowsil™.
+                    </p>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="relative w-full md:w-96">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    <input
+                        type="text"
+                        id="product-search"
+                        placeholder="Tìm mã keo (A300, A500, Foam...) hoặc ứng dụng..."
+                        class="w-full pl-11 pr-10 py-3 rounded-xl bg-white border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#0056A6] focus:border-transparent shadow-sm"
+                    >
+                    <button id="clear-search-btn" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 p-1" aria-label="Xóa tìm kiếm">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="flex flex-wrap items-center justify-between gap-4 mb-10">
+                <div class="flex flex-wrap gap-2.5" id="category-tabs">
+                    <button data-category="all" class="cat-tab active px-4 py-2.5 rounded-xl text-sm font-semibold transition-all bg-[#003B73] text-white shadow-md">
+                        Tất cả <span class="ml-1 opacity-80 text-xs" id="count-all">(9)</span>
+                    </button>
+                    <button data-category="acrylic" class="cat-tab px-4 py-2.5 rounded-xl text-sm font-semibold transition-all bg-white text-slate-600 border border-slate-200 hover:border-[#0056A6] hover:text-[#0056A6]">
+                        Keo Acrylic <span class="ml-1 opacity-70 text-xs" id="count-acrylic">(1)</span>
+                    </button>
+                    <button data-category="acid" class="cat-tab px-4 py-2.5 rounded-xl text-sm font-semibold transition-all bg-white text-slate-600 border border-slate-200 hover:border-[#0056A6] hover:text-[#0056A6]">
+                        Keo Acid <span class="ml-1 opacity-70 text-xs" id="count-acid">(3)</span>
+                    </button>
+                    <button data-category="oxime" class="cat-tab px-4 py-2.5 rounded-xl text-sm font-semibold transition-all bg-white text-slate-600 border border-slate-200 hover:border-[#0056A6] hover:text-[#0056A6]">
+                        Keo Oxime <span class="ml-1 opacity-70 text-xs" id="count-oxime">(2)</span>
+                    </button>
+                    <button data-category="foam" class="cat-tab px-4 py-2.5 rounded-xl text-sm font-semibold transition-all bg-white text-slate-600 border border-slate-200 hover:border-[#0056A6] hover:text-[#0056A6]">
+                        Apollo Foam <span class="ml-1 opacity-70 text-xs" id="count-foam">(1)</span>
+                    </button>
+                    <button data-category="dowsil" class="cat-tab px-4 py-2.5 rounded-xl text-sm font-semibold transition-all bg-white text-slate-600 border border-slate-200 hover:border-[#0056A6] hover:text-[#0056A6]">
+                        Dowsil™ &amp; Sơn lót <span class="ml-1 opacity-70 text-xs" id="count-dowsil">(2)</span>
+                    </button>
+                </div>
+
+                <div class="text-xs font-medium text-slate-500" id="result-counter">
+                    Hiển thị 9 sản phẩm
+                </div>
+            </div>
+
+            <!-- Product Grid (Rendered dynamically via JS) -->
+            <div id="product-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Product cards injected here -->
+            </div>
+
+            <!-- Empty State (Hidden by default) -->
+            <div id="empty-state" class="hidden text-center py-16 bg-white rounded-2xl border border-slate-200">
+                <div class="w-16 h-16 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center text-2xl mx-auto mb-4">
+                    <i class="fa-solid fa-box-open"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-700">Không tìm thấy sản phẩm phù hợp</h3>
+                <p class="text-sm text-slate-500 mt-1">Vui lòng thử từ khóa khác hoặc chọn lại danh mục "Tất cả".</p>
+                <button onclick="resetFilters()" class="mt-4 px-5 py-2.5 rounded-xl bg-[#0056A6] text-white text-sm font-semibold hover:bg-[#003B73] transition-colors">
+                    Xem tất cả sản phẩm
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 4. GIỚI THIỆU THƯƠNG HIỆU ================= -->
+    <section id="gioi-thieu" class="py-16 lg:py-24 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-10 items-center mb-14">
+                <div class="lg:col-span-6 space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-widest text-[#D9232E]">Về Quốc Huy Anh Corp</span>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#003B73] leading-tight">
+                        Đơn Vị Tiên Phong Ngành Hóa Chất Xây Dựng Tại Việt Nam
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Quốc Huy Anh Corp tự hào là đơn vị tiên phong cung cấp giải pháp toàn diện về keo silicone và hóa chất xây dựng, kiến tạo những công trình bền vững theo thời gian với phương châm <strong>"Một lần chạm là một đời gắn kết"</strong>.
+                    </p>
+                </div>
+                <div class="lg:col-span-6">
+                    <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-lg">
+                        <img
+                            src="assets/images/brand-banner.jpg"
+                            alt="Apollo Silicone Sealant - Một lần chạm là một đời gắn kết"
+                            class="w-full h-56 sm:h-64 object-cover object-top"
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Card 1: Tâm truyền Tâm -->
+                <div class="p-7 rounded-2xl bg-[#F8FAFC] border border-slate-200 hover:border-[#0056A6]/40 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-[#D9232E]/10 text-[#D9232E] flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#003B73] mb-2">Triết Lý "Tâm Truyền Tâm"</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Đặt chữ Tâm làm nền tảng trong mọi hoạt động sản xuất, phân phối và phục vụ khách hàng, mang lại giá trị chân thật và bền vững nhất cho đối tác và người tiêu dùng.
+                    </p>
+                </div>
+
+                <!-- Card 2: Win - Win - Win -->
+                <div class="p-7 rounded-2xl bg-[#F8FAFC] border border-slate-200 hover:border-[#0056A6]/40 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-[#0056A6]/10 text-[#0056A6] flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#003B73] mb-2">Nguyên Tắc "Win - Win - Win"</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Xây dựng hệ sinh thái hợp tác cùng phát triển hài hòa lợi ích giữa: <strong>Nhà cung cấp – Doanh nghiệp – Khách hàng &amp; Cộng đồng</strong>.
+                    </p>
+                </div>
+
+                <!-- Card 3: Nguyên liệu nhập khẩu -->
+                <div class="p-7 rounded-2xl bg-[#F8FAFC] border border-slate-200 hover:border-[#0056A6]/40 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#003B73] mb-2">Chất Lượng Nguyên Đai Nguyên Kiện</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Hợp tác trực tiếp với Dow Chemical (Hoa Kỳ) và ShinEtsu (Nhật Bản), đảm bảo nguồn nguyên liệu cao cấp, không pha tạp, đạt chuẩn kỹ thuật khắt khe.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 5. HƯỚNG DẪN KỸ THUẬT & THI CÔNG (3 TABS) ================= -->
+    <section id="ky-thuat" class="py-16 lg:py-24 bg-[#F8FAFC] border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#D9232E]">Tiêu Chuẩn Kỹ Thuật</span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#003B73] mt-2">
+                    Hướng Dẫn Kỹ Thuật &amp; Thi Công Chuẩn
+                </h2>
+                <p class="text-slate-600 mt-3">
+                    Đảm bảo độ bám dính, tính thẩm mỹ và tuổi thọ tối đa cho mối nối công trình theo khuyến cáo từ chuyên gia Apollo Silicone.
+                </p>
+            </div>
+
+            <!-- Tech Tabs Navigation -->
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <button onclick="switchTechTab('tab-joint')" id="btn-tab-joint" class="tech-tab-btn px-5 py-3 rounded-xl text-sm font-bold transition-all bg-[#003B73] text-white shadow-md flex items-center gap-2">
+                    <i class="fa-solid fa-ruler-combined"></i>
+                    <span>1. Thiết kế mối nối</span>
+                </button>
+                <button onclick="switchTechTab('tab-primer')" id="btn-tab-primer" class="tech-tab-btn px-5 py-3 rounded-xl text-sm font-bold transition-all bg-white border border-slate-200 text-slate-600 hover:bg-slate-100 flex items-center gap-2">
+                    <i class="fa-solid fa-fill-drip"></i>
+                    <span>2. Sử dụng Sơn lót (Primer)</span>
+                </button>
+                <button onclick="switchTechTab('tab-steps')" id="btn-tab-steps" class="tech-tab-btn px-5 py-3 rounded-xl text-sm font-bold transition-all bg-white border border-slate-200 text-slate-600 hover:bg-slate-100 flex items-center gap-2">
+                    <i class="fa-solid fa-list-ol"></i>
+                    <span>3. Quy trình thi công 8 bước</span>
+                </button>
+            </div>
+
+            <!-- TAB 1: THIẾT KẾ MỐI NỐI -->
+            <div id="tab-joint" class="tech-tab-content">
+                <div class="grid lg:grid-cols-12 gap-8 items-center bg-white rounded-2xl p-6 sm:p-10 border border-slate-200 shadow-sm">
+                    <div class="lg:col-span-6 space-y-5">
+                        <h3 class="text-xl sm:text-2xl font-bold text-[#003B73]">Nguyên Tắc Thiết Kế Mối Nối Chuẩn</h3>
+                        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                            Thiết kế mối nối đúng chuẩn giúp keo silicone phát huy tối đa khả năng co giãn, chịu lực chuyển vị và ngăn ngừa hiện tượng rách keo do bám dính 3 mặt.
+                        </p>
+
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3 p-4 rounded-xl bg-[#F8FAFC] border border-slate-200">
+                                <div class="w-8 h-8 rounded-lg bg-[#0056A6]/10 text-[#0056A6] flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-arrows-left-right"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">Kích thước tối thiểu</h4>
+                                    <p class="text-xs sm:text-sm text-slate-600 mt-0.5">Chiều rộng và chiều sâu tối thiểu của mối nối phải đạt ít nhất <strong>6mm</strong> để đảm bảo lượng keo đủ chịu lực và co giãn.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3 p-4 rounded-xl bg-[#F8FAFC] border border-slate-200">
+                                <div class="w-8 h-8 rounded-lg bg-[#D9232E]/10 text-[#D9232E] flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-scale-balanced"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">Tỷ lệ Chiều rộng (W) : Chiều sâu (D)</h4>
+                                    <p class="text-xs sm:text-sm text-slate-600 mt-0.5">Áp dụng tỷ lệ <strong>1:1</strong> đối với khe nhỏ (6–12mm) và tỷ lệ <strong>2:1</strong> (Chiều rộng gấp đôi chiều sâu) đối với các khe rộng trên 12mm.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3 p-4 rounded-xl bg-[#F8FAFC] border border-slate-200">
+                                <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-circle-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">Vật liệu chèn (Backer Rod)</h4>
+                                    <p class="text-xs sm:text-sm text-slate-600 mt-0.5">Sử dụng thanh xốp <strong>Polyethylene</strong> chèn bên dưới giúp định hình chiều sâu mối nối và ngăn keo bám dính vào mặt đáy (chống bám dính 3 mặt).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Official Technical Diagram -->
+                    <div class="lg:col-span-6">
+                        <div class="bg-[#E6F4FA] rounded-2xl p-4 sm:p-5 border border-sky-200 shadow-sm">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-xs font-bold uppercase tracking-wider text-[#003B73]">
+                                    Sơ đồ mặt cắt mối nối chuẩn Apollo
+                                </span>
+                                <button onclick="openLightbox('assets/images/tech-joint-design.png', 'Sơ đồ mặt cắt thiết kế mối nối chuẩn Apollo Silicone')" class="text-xs font-semibold text-[#0056A6] hover:underline flex items-center gap-1">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i> Phóng to
+                                </button>
+                            </div>
+                            <img
+                                src="assets/images/tech-joint-design.png"
+                                alt="Sơ đồ thiết kế mối nối chất trám Silicone và vật liệu chèn"
+                                onclick="openLightbox('assets/images/tech-joint-design.png', 'Sơ đồ mặt cắt thiết kế mối nối chuẩn Apollo Silicone')"
+                                class="w-full h-auto rounded-xl bg-white cursor-zoom-in shadow-sm hover:opacity-95 transition-opacity"
+                            >
+                            <p class="text-center text-xs font-semibold text-[#003B73] mt-3">
+                                Chỉ bám dính 2 mặt bên — Không bám dính mặt đáy
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: SỬ DỤNG SƠN LÓT (PRIMER) -->
+            <div id="tab-primer" class="tech-tab-content hidden">
+                <div class="bg-white rounded-2xl p-6 sm:p-10 border border-slate-200 shadow-sm">
+                    <div class="mb-6">
+                        <h3 class="text-xl sm:text-2xl font-bold text-[#003B73]">Hướng Dẫn Chọn Sơn Lót (Primer) Theo Bề Mặt</h3>
+                        <p class="text-sm text-slate-600 mt-1">
+                            Sử dụng đúng loại sơn lót giúp tăng cường độ bám dính hóa học, đặc biệt quan trọng với các bề mặt khó bám hoặc chịu tác động thời tiết khắc nghiệt.
+                        </p>
+                    </div>
+
+                    <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-[#003B73] text-white text-xs sm:text-sm uppercase tracking-wider">
+                                    <th class="py-4 px-5 font-semibold">Phân loại bề mặt</th>
+                                    <th class="py-4 px-5 font-semibold">Vật liệu tiêu biểu</th>
+                                    <th class="py-4 px-5 font-semibold">Sơn lót khuyến nghị</th>
+                                    <th class="py-4 px-5 font-semibold">Lưu ý thi công</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 text-sm">
+                                <tr class="hover:bg-slate-50">
+                                    <td class="py-4 px-5 font-bold text-[#003B73]">
+                                        <span class="inline-flex items-center gap-2">
+                                            <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+                                            Bề mặt rỗ xốp (Porous)
+                                        </span>
+                                    </td>
+                                    <td class="py-4 px-5 text-slate-600">Bê tông, vữa xi măng, đá tự nhiên, gạch không nung, gỗ</td>
+                                    <td class="py-4 px-5 font-semibold text-[#D9232E]">Dowsil™ Primer 1200-OS / Primer P</td>
+                                    <td class="py-4 px-5 text-slate-600">Làm sạch bụi mịn bằng bàn chải thép/khí nén; quét lớp mỏng đều, đợi khô 15–30 phút trước khi bắn keo.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="py-4 px-5 font-bold text-[#003B73]">
+                                        <span class="inline-flex items-center gap-2">
+                                            <span class="w-2.5 h-2.5 rounded-full bg-[#0056A6]"></span>
+                                            Bề mặt không rỗ xốp (Non-Porous)
+                                        </span>
+                                    </td>
+                                    <td class="py-4 px-5 text-slate-600">Kính, nhôm sơn tĩnh điện, thép không gỉ (Inox), kim loại phủ màu, nhựa PVC</td>
+                                    <td class="py-4 px-5 font-semibold text-[#0056A6]">Dowsil™ Primer C-OS / Primer MT</td>
+                                    <td class="py-4 px-5 text-slate-600">Lau sạch dầu mỡ bằng phương pháp 2 khăn (dung môi chuyên dụng); quét lớp sơn lót cực mỏng, không để đọng vũng.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: QUY TRÌNH THI CÔNG 8 BƯỚC -->
+            <div id="tab-steps" class="tech-tab-content hidden">
+                <div class="bg-white rounded-2xl p-6 sm:p-10 border border-slate-200 shadow-sm">
+                    <div class="mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-bold text-[#003B73]">Quy Trình Thi Công Keo Silicone 8 Bước Chuẩn</h3>
+                            <p class="text-sm text-slate-600 mt-1">Tuân thủ đầy đủ 8 bước giúp mối nối đạt thẩm mỹ sắc nét và độ bền vượt trội.</p>
+                        </div>
+                        <button onclick="openLightbox('assets/images/tech-8-steps.jpg', 'Minh họa quy trình thi công keo silicone 8 bước chuẩn')" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-100 hover:bg-[#003B73] text-slate-700 hover:text-white text-xs font-bold transition-colors self-start sm:self-auto">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>Xem hình minh họa lớn</span>
+                        </button>
+                    </div>
+
+                    <div class="grid lg:grid-cols-12 gap-8 items-start">
+                        <!-- Official 8-Step Illustration -->
+                        <div class="lg:col-span-5">
+                            <div class="rounded-2xl overflow-hidden border border-slate-200 bg-[#F8FAFC] p-3 shadow-sm">
+                                <img
+                                    src="assets/images/tech-8-steps.jpg"
+                                    alt="Minh họa quy trình thi công 8 bước keo silicone"
+                                    onclick="openLightbox('assets/images/tech-8-steps.jpg', 'Minh họa quy trình thi công keo silicone 8 bước chuẩn')"
+                                    class="w-full h-auto rounded-xl cursor-zoom-in hover:opacity-95 transition-opacity"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- 8 Step Cards -->
+                        <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4">
+                            <div class="p-4 rounded-xl bg-[#F8FAFC] border border-slate-200 hover:border-[#0056A6] transition-all">
+                                <div class="flex items-center gap-2.5 mb-2">
+                                    <span class="w-7 h-7 rounded-lg bg-[#003B73] text-white font-extrabold text-xs flex items-center justify-center shrink-0">01</span>
+                                    <h4 class="font-bold text-slate-800 text-sm">Làm sạch bề mặt</h4>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed">Loại bỏ hoàn toàn bụi bẩn, dầu mỡ, hơi ẩm bằng dung môi phù hợp và khăn sạch không xơ.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-[#F8FAFC] border border-slate-200 hover:border-[#0056A6] transition-all">
+                                <div class="flex items-center gap-2.5 mb-2">
+                                    <span class="w-7 h-7 rounded-lg bg-[#003B73] text-white font-extrabold text-xs flex items-center justify-center shrink-0">02</span>
+                                    <h4 class="font-bold text-slate-800 text-sm">Chèn vật liệu lót</h4>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed">Chèn thanh xốp Polyethylene (backer rod) vào khe đúng chiều sâu theo tỷ lệ W:D quy định.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-[#F8FAFC] border border-slate-200 hover:border-[#0056A6] transition-all">
+                                <div class="flex items-center gap-2.5 mb-2">
+                                    <span class="w-7 h-7 rounded-lg bg-[#003B73] text-white font-extrabold text-xs flex items-center justify-center shrink-0">03</span>
+                                    <h4 class="font-bold text-slate-800 text-sm">Dán băng keo bảo vệ</h4>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed">Dán băng keo giấy dọc hai mép khe nối để giữ đường keo thẳng đẹp và tránh lem bẩn ra vật liệu.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-[#F8FAFC] border border-slate-200 hover:border-[#0056A6] transition-all">
+                                <div class="flex items-center gap-2.5 mb-2">
+                                    <span class="w-7 h-7 rounded-lg bg-[#003B73] text-white font-extrabold text-xs flex items-center justify-center shrink-0">04</span>
+                                    <h4 class="font-bold text-slate-800 text-sm">Quét sơn lót (Primer)</h4>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed">Quét lớp sơn lót mỏng lên bề mặt (nếu cần) để tối ưu độ bám dính, chờ khô theo khuyến nghị.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-[#F8FAFC] border border-slate-200 hover:border-[#0056A6] transition-all">
+                                <div class="flex items-center gap-2.5 mb-2">
+                                    <span class="w-7 h-7 rounded-lg bg-[#0056A6] text-white font-extrabold text-xs flex items-center justify-center shrink-0">05</span>
+                                    <h4 class="font-bold text-slate-800 text-sm">Bắn keo liên tục</h4>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed">Cắt đầu vòi góc 45°, bơm keo liên tục đều tay đẩy keo lấp đầy khe nối, tránh tạo bọt khí.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-[#F8FAFC] border border-slate-200 hover:border-[#0056A6] transition-all">
+                                <div class="flex items-center gap-2.5 mb-2">
+                                    <span class="w-7 h-7 rounded-lg bg-[#0056A6] text-white font-extrabold text-xs flex items-center justify-center shrink-0">06</span>
+                                    <h4 class="font-bold text-slate-800 text-sm">Miết tạo hình mối nối</h4>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed">Miết nhẹ bằng dụng cụ chuyên dụng trước khi keo khô bề mặt để nén chặt keo tiếp xúc hai thành khe.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-[#F8FAFC] border border-slate-200 hover:border-[#0056A6] transition-all">
+                                <div class="flex items-center gap-2.5 mb-2">
+                                    <span class="w-7 h-7 rounded-lg bg-[#0056A6] text-white font-extrabold text-xs flex items-center justify-center shrink-0">07</span>
+                                    <h4 class="font-bold text-slate-800 text-sm">Gỡ băng keo bảo vệ</h4>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed">Tháo bỏ băng keo giấy ngay sau khi miết tạo hình xong (trước khi lớp màng bề mặt keo kịp se lại).</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-[#F8FAFC] border border-slate-200 hover:border-[#D9232E] transition-all">
+                                <div class="flex items-center gap-2.5 mb-2">
+                                    <span class="w-7 h-7 rounded-lg bg-[#D9232E] text-white font-extrabold text-xs flex items-center justify-center shrink-0">08</span>
+                                    <h4 class="font-bold text-slate-800 text-sm">Lưu hóa hoàn toàn</h4>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed">Bảo vệ mối nối tránh va chạm, bụi bẩn trong quá trình lưu hóa (24–48 giờ tùy độ dày và độ ẩm).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 6. CÔNG TRÌNH TIÊU BIỂU & HOẠT ĐỘNG XÃ HỘI ================= -->
+    <section id="cong-trinh" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-10">
+                <!-- Left: Công trình trọng điểm -->
+                <div class="lg:col-span-7">
+                    <span class="text-xs font-bold uppercase tracking-widest text-[#D9232E]">Dấu Ấn Chất Lượng</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-[#003B73] mt-1 mb-6">
+                        Công Trình Trọng Điểm Quốc Gia
+                    </h2>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 hover:shadow-md transition-all flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-[#003B73] text-white flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-800">Tòa tháp Bitexco</h3>
+                                <p class="text-xs text-slate-500 mt-1">TP. Hồ Chí Minh • Biểu tượng kiến trúc mặt dựng kính cao cấp.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 hover:shadow-md transition-all flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-[#0056A6] text-white flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-city"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-800">Vincom Center</h3>
+                                <p class="text-xs text-slate-500 mt-1">Hệ thống trung tâm thương mại &amp; cao ốc phức hợp hàng đầu.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 hover:shadow-md transition-all flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-[#003B73] text-white flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-plane-departure"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-800">Sân bay Quốc tế Nội Bài</h3>
+                                <p class="text-xs text-slate-500 mt-1">Hà Nội • Cảng hàng không trọng điểm phía Bắc.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 hover:shadow-md transition-all flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-[#0056A6] text-white flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-plane-arrival"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-800">Sân bay Quốc tế Đà Nẵng</h3>
+                                <p class="text-xs text-slate-500 mt-1">Đà Nẵng • Công trình hạ tầng hàng không trọng điểm miền Trung.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Hoạt động cộng đồng & Tài trợ -->
+                <div class="lg:col-span-5">
+                    <div class="h-full p-7 rounded-2xl bg-gradient-to-br from-[#003B73] to-[#0056A6] text-white shadow-xl flex flex-col justify-between">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-white/15 text-xs font-bold uppercase tracking-wider text-sky-200 mb-3">
+                                Trách Nhiệm Xã Hội
+                            </span>
+                            <h2 class="text-2xl font-extrabold mb-4">Hoạt Động Cộng Đồng &amp; Tài Trợ</h2>
+                            <p class="text-sm text-sky-100 leading-relaxed mb-6">
+                                Song hành cùng phát triển kinh doanh, Quốc Huy Anh Corp luôn tiên phong sẻ chia và đồng hành cùng sự phát triển của ngành xây dựng &amp; xã hội.
+                            </p>
+
+                            <ul class="space-y-3.5 text-sm">
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-award text-[#D9232E] bg-white rounded-full p-1 text-xs mt-0.5"></i>
+                                    <span><strong>Tài trợ chính Triển lãm Quốc tế Vietbuild</strong> trong nhiều năm liền.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-hand-holding-medical text-sky-300 mt-0.5"></i>
+                                    <span>Tiên phong <strong>ủng hộ công tác phòng chống dịch COVID-19</strong>.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-truck-medical text-sky-300 mt-0.5"></i>
+                                    <span><strong>Tài trợ xe cứu thương</strong> cho các cơ sở y tế và địa phương.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-graduation-cap text-sky-300 mt-0.5"></i>
+                                    <span><strong>Trao tặng học bổng</strong> tiếp sức đến trường cho học sinh, sinh viên vượt khó.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-[#002244] text-slate-300 pt-14 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-10 pb-10 border-b border-white/10">
+                <div>
+                    <div class="flex items-center gap-2.5 mb-4">
+                        <div class="w-9 h-9 rounded-lg bg-[#D9232E] flex items-center justify-center text-white">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <span class="text-lg font-extrabold text-white">APOLLO SILICONE</span>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        <strong>Công ty Cổ phần Quốc Huy Anh</strong> — Đơn vị tiên phong cung cấp giải pháp toàn diện về keo silicone và hóa chất xây dựng tại Việt Nam.
+                    </p>
+                    <a href="https://www.quochuyanhcorp.vn" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-sky-300 hover:text-white transition-colors">
+                        <i class="fa-solid fa-globe"></i>
+                        <span>www.quochuyanhcorp.vn</span>
+                    </a>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Liên Kết Nhanh</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#san-pham" class="hover:text-white transition-colors">Danh mục sản phẩm trưng bày</a></li>
+                        <li><a href="#gioi-thieu" class="hover:text-white transition-colors">Giới thiệu Quốc Huy Anh Corp</a></li>
+                        <li><a href="#ky-thuat" class="hover:text-white transition-colors">Hướng dẫn kỹ thuật &amp; thi công</a></li>
+                        <li><a href="#cong-trinh" class="hover:text-white transition-colors">Công trình tiêu biểu</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Tư Vấn &amp; Báo Giá</h4>
+                    <p class="text-sm text-slate-400 mb-4">
+                        Cần tư vấn kỹ thuật chọn keo cho công trình hoặc nhận bảng báo giá đại lý?
+                    </p>
+                    <button onclick="openQuoteModal('')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#D9232E] hover:bg-red-700 text-white text-sm font-semibold transition-all">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Gửi Yêu Cầu Báo Giá</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+                <p>&copy; 2026 Quốc Huy Anh Corp — Apollo Silicone. E-Catalogue Trưng Bày Sản Phẩm.</p>
+                <p>Triết lý kinh doanh: <span class="text-white font-semibold">Tâm truyền Tâm</span> • <span class="text-white font-semibold">Win - Win - Win</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= MODAL XEM CHI TIẾT SẢN PHẨM ================= -->
+    <div id="product-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[92vh] overflow-y-auto shadow-2xl border border-slate-200 animate-modal">
+            <!-- Modal Header -->
+            <div id="modal-header-bar" class="p-5 sm:p-6 text-white flex items-start justify-between bg-[#003B73]">
+                <div>
+                    <span id="modal-category-badge" class="inline-block px-2.5 py-0.5 rounded-full bg-white/20 text-xs font-bold uppercase tracking-wider mb-1.5">Danh mục</span>
+                    <h3 id="modal-title" class="text-xl sm:text-2xl font-extrabold">Tên sản phẩm</h3>
+                    <p id="modal-subtitle" class="text-xs sm:text-sm text-white/85 mt-0.5">Phụ đề sản phẩm</p>
+                </div>
+                <button onclick="closeProductModal()" class="w-9 h-9 rounded-xl bg-white/15 hover:bg-white/25 flex items-center justify-center text-white transition-colors shrink-0" aria-label="Đóng">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-5 sm:p-6 space-y-6">
+                <!-- Top Split: Image Gallery + Quick Specs -->
+                <div class="grid md:grid-cols-12 gap-5 items-start">
+                    <div class="md:col-span-6 space-y-2.5">
+                        <div id="modal-image-stage" class="rounded-xl overflow-hidden border border-slate-200 bg-slate-50 h-60 flex items-center justify-center relative">
+                            <!-- Active image injected here -->
+                        </div>
+                        <div id="modal-thumbs" class="flex gap-2 overflow-x-auto pb-1">
+                            <!-- Thumbnails injected here if multiple images -->
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-6 space-y-4">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">Mô tả tổng quan</h4>
+                            <p id="modal-desc" class="text-sm text-slate-700 leading-relaxed"></p>
+                        </div>
+
+                        <div class="rounded-xl bg-[#F8FAFC] border border-slate-200 p-3.5">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-[#003B73] mb-2.5 flex items-center gap-1.5">
+                                <i class="fa-solid fa-sliders text-[#0056A6]"></i> Thông số tham khảo
+                            </h4>
+                            <dl id="modal-specs" class="grid grid-cols-2 gap-x-3 gap-y-2 text-xs">
+                                <!-- Specs injected here -->
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features & Applications -->
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="p-4 rounded-xl bg-[#F8FAFC] border border-slate-200">
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-[#003B73] mb-2.5 flex items-center gap-1.5">
+                            <i class="fa-solid fa-check-double text-[#D9232E]"></i> Đặc tính nổi bật
+                        </h4>
+                        <ul id="modal-features" class="space-y-1.5 text-sm text-slate-600"></ul>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-[#F8FAFC] border border-slate-200">
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-[#003B73] mb-2.5 flex items-center gap-1.5">
+                            <i class="fa-solid fa-wrench text-[#0056A6]"></i> Ứng dụng chính
+                        </h4>
+                        <ul id="modal-apps" class="space-y-1.5 text-sm text-slate-600"></ul>
+                    </div>
+                </div>
+
+                <!-- Modal Footer Actions -->
+                <div class="pt-4 border-t border-slate-200 flex flex-wrap justify-end gap-3">
+                    <button onclick="closeProductModal()" class="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold transition-colors">
+                        Đóng
+                    </button>
+                    <button id="modal-quote-btn" class="px-6 py-2.5 rounded-xl bg-[#D9232E] hover:bg-red-700 text-white text-sm font-semibold shadow-md flex items-center gap-2 transition-colors">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <span>Liên hệ báo giá sản phẩm này</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= MODAL YÊU CẦU BÁO GIÁ ================= -->
+    <div id="quote-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl max-w-lg w-full shadow-2xl border border-slate-200 overflow-hidden animate-modal">
+            <div class="p-6 bg-[#003B73] text-white flex items-center justify-between">
+                <div>
+                    <h3 class="text-xl font-extrabold">Liên Hệ Tư Vấn &amp; Báo Giá</h3>
+                    <p class="text-xs text-sky-200 mt-0.5">Đội ngũ Quốc Huy Anh Corp sẽ phản hồi nhanh chóng</p>
+                </div>
+                <button onclick="closeQuoteModal()" class="w-9 h-9 rounded-xl bg-white/15 hover:bg-white/25 flex items-center justify-center text-white transition-colors" aria-label="Đóng">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <form id="quote-form" class="p-6 space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">Sản phẩm quan tâm</label>
+                    <input type="text" id="quote-product" placeholder="VD: Apollo Silicone A300, A500, Apollo Foam..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#0056A6]">
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">Họ và tên <span class="text-[#D9232E]">*</span></label>
+                        <input type="text" id="quote-name" required placeholder="Nguyễn Văn A" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#0056A6]">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">Số điện thoại <span class="text-[#D9232E]">*</span></label>
+                        <input type="tel" id="quote-phone" required placeholder="0901 234 567" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#0056A6]">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">Tên Công ty / Dự án</label>
+                    <input type="text" id="quote-company" placeholder="Công ty Xây dựng / Dự án..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#0056A6]">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">Ghi chú số lượng / Yêu cầu kỹ thuật</label>
+                    <textarea id="quote-note" rows="3" placeholder="Nhập số lượng dự kiến hoặc yêu cầu tư vấn thêm..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#0056A6]"></textarea>
+                </div>
+
+                <div class="pt-2 flex justify-end gap-3">
+                    <button type="button" onclick="closeQuoteModal()" class="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold transition-colors">
+                        Hủy
+                    </button>
+                    <button type="submit" class="px-6 py-2.5 rounded-xl bg-[#D9232E] hover:bg-red-700 text-white text-sm font-semibold shadow-md flex items-center gap-2 transition-colors">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Gửi Yêu Cầu</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= IMAGE LIGHTBOX MODAL ================= -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/85 backdrop-blur-sm">
+        <div class="relative max-w-4xl w-full flex flex-col items-center animate-modal">
+            <button onclick="closeLightbox()" class="self-end mb-3 w-10 h-10 rounded-full bg-white/15 hover:bg-white/30 text-white flex items-center justify-center transition-colors" aria-label="Đóng ảnh">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <img id="lightbox-img" src="" alt="" class="max-h-[80vh] max-w-full rounded-2xl shadow-2xl bg-white object-contain">
+            <p id="lightbox-caption" class="text-sm text-slate-200 font-medium mt-3 text-center"></p>
+        </div>
+    </div>
+
+    <!-- ================= TOAST NOTIFICATION ================= -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 hidden items-center gap-3 px-5 py-4 rounded-2xl bg-emerald-600 text-white shadow-2xl border border-emerald-500 transition-all max-w-md">
+        <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div>
+            <h4 class="font-bold text-sm">Gửi yêu cầu thành công!</h4>
+            <p id="toast-message" class="text-xs text-emerald-100">Chúng tôi đã nhận thông tin và sẽ liên hệ báo giá sớm nhất.</p>
+        </div>
+    </div>
+
+    <!-- ================= JAVASCRIPT LOGIC ================= -->
+    <script>
+        // Helper: Tạo hình minh họa chai keo chuẩn Apollo cho các mã chưa có ảnh riêng (A100, A200, Primer)
+        function createCartridgeSVG(code, accentColor, subText, isBottle = false) {
+            if (isBottle) {
+                return `
+                    <svg viewBox="0 0 260 220" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="bg-${code}" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#F5F3FF"/>
+                                <stop offset="100%" stop-color="#EDE9FE"/>
+                            </linearGradient>
+                            <linearGradient id="body-${code}" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#E2E8F0"/>
+                                <stop offset="35%" stop-color="#FFFFFF"/>
+                                <stop offset="100%" stop-color="#CBD5E1"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="260" height="220" fill="url(#bg-${code})"/>
+                        <circle cx="130" cy="115" r="78" fill="${accentColor}" opacity="0.08"/>
+                        <!-- Bottle Cap -->
+                        <rect x="115" y="28" width="30" height="16" rx="3" fill="#1E293B"/>
+                        <rect x="119" y="44" width="22" height="10" fill="#94A3B8"/>
+                        <!-- Bottle Body -->
+                        <path d="M 92 70 Q 92 54 119 54 L 141 54 Q 168 54 168 70 L 168 186 Q 168 194 160 194 L 100 194 Q 92 194 92 186 Z" fill="url(#body-${code})" stroke="#CBD5E1" stroke-width="1.5"/>
+                        <!-- Label -->
+                        <rect x="93" y="88" width="74" height="82" fill="${accentColor}"/>
+                        <rect x="93" y="88" width="74" height="16" fill="#003B73"/>
+                        <text x="130" y="99" text-anchor="middle" font-size="8" font-weight="800" fill="#FFFFFF" letter-spacing="1">DOWSIL™</text>
+                        <text x="130" y="128" text-anchor="middle" font-size="14" font-weight="900" fill="#FFFFFF">${code}</text>
+                        <text x="130" y="145" text-anchor="middle" font-size="7.5" font-weight="600" fill="#E9D5FF">${subText}</text>
+                        <text x="130" y="160" text-anchor="middle" font-size="7" font-weight="700" fill="#FFFFFF">1200-OS • C-OS • MT</text>
+                    </svg>
+                `;
+            }
+
+            return `
+                <svg viewBox="0 0 260 220" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="bg-${code}" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#F8FAFC"/>
+                            <stop offset="100%" stop-color="#E2E8F0"/>
+                        </linearGradient>
+                        <linearGradient id="tube-${code}" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#E2E8F0"/>
+                            <stop offset="32%" stop-color="#FFFFFF"/>
+                            <stop offset="75%" stop-color="#F8FAFC"/>
+                            <stop offset="100%" stop-color="#CBD5E1"/>
+                        </linearGradient>
+                    </defs>
+                    <rect width="260" height="220" fill="url(#bg-${code})"/>
+                    <polygon points="0,0 135,0 0,145" fill="${accentColor}" opacity="0.14"/>
+                    <polygon points="260,220 140,220 260,95" fill="#003B73" opacity="0.08"/>
+                    <!-- Nozzle -->
+                    <polygon points="127,12 133,12 138,56 122,56" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+                    <!-- Tube Shoulder -->
+                    <rect x="108" y="56" width="44" height="8" rx="2" fill="#E2E8F0"/>
+                    <!-- Tube Barrel -->
+                    <rect x="106" y="64" width="48" height="138" rx="3" fill="url(#tube-${code})" stroke="#CBD5E1" stroke-width="1.2"/>
+                    <!-- Apollo Wordmark -->
+                    <text x="130" y="96" text-anchor="middle" font-size="10.5" font-weight="900" fill="#003B73" letter-spacing="0.5">APOLLO</text>
+                    <text x="130" y="106" text-anchor="middle" font-size="5.5" font-weight="700" fill="#D9232E" letter-spacing="0.8">SILICONE SEALANT</text>
+                    <!-- Colored Label Band -->
+                    <rect x="106.5" y="118" width="47" height="72" fill="${accentColor}"/>
+                    <rect x="143" y="118" width="10.5" height="72" fill="#003B73"/>
+                    <text x="125" y="148" text-anchor="middle" font-size="14" font-weight="900" fill="#FFFFFF">${code}</text>
+                    <text x="125" y="162" text-anchor="middle" font-size="6.5" font-weight="700" fill="#FFFFFF" opacity="0.9">${subText}</text>
+                    <rect x="115" y="172" width="20" height="9" rx="4.5" fill="none" stroke="#FFFFFF" stroke-width="0.8" opacity="0.8"/>
+                    <text x="125" y="178.5" text-anchor="middle" font-size="5.2" font-weight="700" fill="#FFFFFF">300 ml</text>
+                </svg>
+            `;
+        }
+
+        // 1. Dữ liệu Catalogue Sản phẩm Apollo Silicone
+        const productsData = [
+            {
+                id: 'a300',
+                name: 'Apollo Silicone A300',
+                code: 'A300',
+                category: 'acid',
+                categoryLabel: 'Keo Acid • Vua Keo Kính',
+                badgeColor: 'bg-[#D9232E]',
+                headerBg: 'from-[#D9232E] to-red-800',
+                image: 'assets/images/a300-showcase.jpg',
+                imageFit: 'object-cover',
+                gallery: [
+                    { src: 'assets/images/a300-showcase.jpg', caption: 'Apollo Silicone A300 — Ứng dụng mặt dựng & kính kiến trúc' },
+                    { src: 'assets/images/a300-product.png', caption: 'Sản phẩm Apollo Silicone Sealant A300 (300ml)' },
+                    { src: 'assets/images/hero-a300.jpg', caption: 'Apollo Silicone A300 — Mệnh danh Vua Keo Kính' }
+                ],
+                tagline: 'Mệnh danh "Vua keo kính" tại Việt Nam',
+                shortDesc: 'Chất trám silicone lưu hóa axit cao cấp, độ đàn hồi và bám dính cực cao, chuyên dụng hàng đầu cho kính và khung nhôm.',
+                specs: {
+                    'Hệ lưu hóa': 'Axit (Acetoxy)',
+                    'Dung tích': '300ml / chai',
+                    'Đóng gói': '25 chai / thùng',
+                    'Màu sắc': 'Trong, Trắng sữa, Đen, Xám'
+                },
+                features: [
+                    'Mệnh danh "Vua keo kính" với độ bám dính cực cao',
+                    'Độ đàn hồi xuất sắc, chịu rung chấn và áp lực gió tốt',
+                    'Kháng thời tiết cực tốt, không giòn gãy hay ố vàng',
+                    'Khô bề mặt nhanh, mối nối bóng đẹp thẩm mỹ'
+                ],
+                applications: [
+                    'Dán kính, bể cá kính, vách kính lớn',
+                    'Thi công cửa nhôm kính cao cấp trong nhà và ngoài trời',
+                    'Trám kín các mối nối kính yêu cầu độ bền cao'
+                ],
+                keywords: 'acid a300 vua keo kinh khung nhom dan hoi cao cap be ca'
+            },
+            {
+                id: 'a500',
+                name: 'Apollo Silicone A500',
+                code: 'A500',
+                category: 'oxime',
+                categoryLabel: 'Keo Oxime (Trung tính)',
+                badgeColor: 'bg-emerald-600',
+                headerBg: 'from-emerald-600 to-teal-800',
+                image: 'assets/images/a500-showcase.jpg',
+                imageFit: 'object-cover',
+                gallery: [
+                    { src: 'assets/images/a500-showcase.jpg', caption: 'Apollo Silicone A500 — Lưu hóa trung tính đa bề mặt' }
+                ],
+                tagline: 'Lưu hóa trung tính, không mùi, đa bề mặt',
+                shortDesc: 'Chất trám silicone lưu hóa trung tính (Oxime), không mùi khó chịu, thích hợp cho cả trong nhà và ngoài trời trên đa dạng bề mặt.',
+                specs: {
+                    'Hệ lưu hóa': 'Trung tính (Oxime)',
+                    'Dung tích': '300ml / chai',
+                    'Đóng gói': '25 chai / thùng',
+                    'Màu sắc': 'Trong, Trắng, Xám, Đen, Nâu...'
+                },
+                features: [
+                    'Lưu hóa trung tính (Oxime), không mùi, an toàn cho không gian kín',
+                    'Không ăn mòn kim loại, không làm ố đá hay bê tông',
+                    'Bám dính đa năng trên hầu hết vật liệu xây dựng',
+                    'Chống chịu thời tiết, tia UV và nấm mốc tốt'
+                ],
+                applications: [
+                    'Thi công trong nhà và ngoài trời trên kính, bê tông, kim loại',
+                    'Trám khe gạch, nhựa uPVC, tấm Alu, mái tôn',
+                    'Lắp đặt thiết bị vệ sinh, khu vực cần không mùi'
+                ],
+                keywords: 'oxime trung tinh a500 khong mui kinh be tong kim loai gach nhua trong nha ngoai troi'
+            },
+            {
+                id: 'a600',
+                name: 'Apollo Silicone A600',
+                code: 'A600',
+                category: 'oxime',
+                categoryLabel: 'Keo Oxime Cao Cấp',
+                badgeColor: 'bg-[#0056A6]',
+                headerBg: 'from-[#0056A6] to-[#003B73]',
+                image: 'assets/images/a600-showcase.jpg',
+                imageFit: 'object-cover',
+                gallery: [
+                    { src: 'assets/images/a600-showcase.jpg', caption: 'Apollo Silicone A600 — Lưu hóa trung tính cao cấp' }
+                ],
+                tagline: 'Lưu hóa trung tính cao cấp, bề mặt mịn đẹp',
+                shortDesc: 'Chất trám silicone lưu hóa trung tính (Oxime) cao cấp, không mùi, cho bề mặt mối nối mịn đẹp và độ bền bỉ vượt trội.',
+                specs: {
+                    'Hệ lưu hóa': 'Trung tính cao cấp (Oxime)',
+                    'Dung tích': '300ml / chai',
+                    'Đóng gói': '25 chai / thùng',
+                    'Bề mặt': 'Mịn bóng, không mùi'
+                },
+                features: [
+                    'Công thức Oxime cao cấp, hoàn toàn không mùi khó chịu',
+                    'Bề mặt sau khi lưu hóa cực mịn, thẩm mỹ cao',
+                    'Độ bền thời tiết và khả năng chống thấm vượt trội',
+                    'Tương thích tốt với nhiều loại vật liệu cao cấp'
+                ],
+                applications: [
+                    'Công trình kiến trúc cao cấp trong nhà và ngoài trời',
+                    'Mối nối kính, kim loại, bê tông, đá và nhựa đòi hỏi thẩm mỹ cao',
+                    'Khu vực nội thất sang trọng, căn hộ cao cấp'
+                ],
+                keywords: 'oxime trung tinh a600 cao cap khong mui min dep ben bi trong nha ngoai troi'
+            },
+            {
+                id: 'a250',
+                name: 'Apollo Silicone A250',
+                code: 'A250',
+                category: 'acid',
+                categoryLabel: 'Keo Acid',
+                badgeColor: 'bg-purple-700',
+                headerBg: 'from-purple-700 to-indigo-800',
+                image: 'assets/images/a250-showcase.jpg',
+                imageFit: 'object-cover',
+                gallery: [
+                    { src: 'assets/images/a250-showcase.jpg', caption: 'Apollo Silicone A250 — Bám dính vượt trội trên kính & xây dựng' }
+                ],
+                tagline: 'Keo silicone axit bám dính vượt trội',
+                shortDesc: 'Chất trám silicone lưu hóa axit với khả năng bám dính vượt trội, độ bền cao và chống chịu thời tiết tốt cho ứng dụng kính và xây dựng.',
+                specs: {
+                    'Hệ lưu hóa': 'Axit (Acetoxy)',
+                    'Dung tích': '300ml / chai',
+                    'Đóng gói': '25 chai / thùng',
+                    'Màu sắc': 'Trong, Trắng sữa, Đen'
+                },
+                features: [
+                    'Độ bám dính vượt trội trên bề mặt kính và kim loại',
+                    'Khả năng co giãn tốt, duy trì độ bền lâu dài',
+                    'Chống chịu thời tiết, độ ẩm và ozon hiệu quả',
+                    'Dễ dàng tạo hình mối nối sắc nét'
+                ],
+                applications: [
+                    'Thi công kính, khung nhôm kính dân dụng và thương mại',
+                    'Trám kín các mối nối xây dựng chịu thời tiết',
+                    'Ứng dụng lắp ráp tủ trưng bày, vật liệu nhẵn'
+                ],
+                keywords: 'acid a250 kinh xay dung bam dinh vuot troi thoi tiet'
+            },
+            {
+                id: 'foam',
+                name: 'Apollo Foam',
+                code: 'FOAM',
+                category: 'foam',
+                categoryLabel: 'Apollo Foam (PU)',
+                badgeColor: 'bg-amber-600',
+                headerBg: 'from-amber-600 to-red-700',
+                image: 'assets/images/foam-showcase.jpg',
+                imageFit: 'object-cover',
+                gallery: [
+                    { src: 'assets/images/foam-showcase.jpg', caption: 'Apollo PU-Foam đa năng (loại dùng vòi)' },
+                    { src: 'assets/images/foam-gun-type.jpg', caption: 'Apollo PU-Foam loại dùng súng (Gun-Type)' },
+                    { src: 'assets/images/foam-straw-type.jpg', caption: 'Apollo PU-Foam kèm vòi xịt tiện dụng (Straw-Type)' }
+                ],
+                tagline: 'Bọt nhựa tổng hợp Polyurethane đa năng',
+                shortDesc: 'Bọt nhựa tổng hợp Polyurethane (PU Foam) tự nở, chuyên dùng để bịt kín khe hở lớn, cách âm, cách nhiệt và chống rung hiệu quả.',
+                specs: {
+                    'Thành phần': 'Polyurethane (PU)',
+                    'Dung tích': '750ml / bình',
+                    'Phiên bản': 'Dùng vòi & Dùng súng',
+                    'Đặc tính': 'Tự trương nở, Ozone Safe'
+                },
+                features: [
+                    'Tự trương nở lấp đầy mọi khe hở, lỗ hổng sâu',
+                    'Khả năng cách âm, cách nhiệt và chống rung vượt trội',
+                    'Bám dính tốt trên bê tông, gạch, gỗ, kim loại, nhựa',
+                    'Có thể cắt gọt, chà nhám và sơn phủ sau khi đóng rắn'
+                ],
+                applications: [
+                    'Chèn khe hở xung quanh khung cửa đi, cửa sổ',
+                    'Bịt kín đường ống kỹ thuật, khe hở tường xuyên tầng',
+                    'Cách âm phòng thu, karaoke, cách nhiệt kho lạnh'
+                ],
+                keywords: 'apollo foam pu bot nhua polyurethane bit kin khe ho cach am cach nhiet chong rung'
+            },
+            {
+                id: 'dowsil',
+                name: 'Dòng sản phẩm Dowsil™',
+                code: 'DOWSIL™',
+                category: 'dowsil',
+                categoryLabel: 'Dowsil™ Chuyên Dụng',
+                badgeColor: 'bg-slate-800',
+                headerBg: 'from-slate-800 to-[#003B73]',
+                image: 'assets/images/dowsil-logo.jpg',
+                imageFit: 'object-contain p-8 bg-white',
+                gallery: [
+                    { src: 'assets/images/dowsil-logo.jpg', caption: 'DOWSIL™ — Silicones by Dow Chemical (Hoa Kỳ)' }
+                ],
+                tagline: 'Dowsil 688, 791, 795, 991, 995, 983, 982',
+                shortDesc: 'Hệ thống keo kết cấu, keo kính hộp và keo chống thấm thời tiết chuyên dụng cao cấp hàng đầu thế giới từ Dow Chemical.',
+                specs: {
+                    'Xuất xứ': 'Dow Chemical (Hoa Kỳ)',
+                    'Nhóm kết cấu': '795, 995, 983',
+                    'Nhóm thời tiết': '791, 991, 688',
+                    'Kính hộp': 'Dowsil 982'
+                },
+                features: [
+                    'Dowsil 795, 995, 983: Keo silicone kết cấu chịu lực cho mặt dựng',
+                    'Dowsil 791, 991, 688: Keo chống thấm thời tiết, chống ố đá',
+                    'Dowsil 982: Keo chuyên dụng cho kính hộp cách âm, cách nhiệt',
+                    'Đạt các tiêu chuẩn quốc tế khắt khe nhất cho cao ốc'
+                ],
+                applications: [
+                    'Mặt dựng kính (Curtain Wall) cho tòa nhà cao tầng, sân bay',
+                    'Sản xuất kính hộp cách âm, cách nhiệt tiêu chuẩn cao',
+                    'Chống thấm khe co giãn mặt tiền đá tự nhiên và kim loại'
+                ],
+                keywords: 'dowsil 688 791 795 991 995 983 982 keo ket cau kinh hop chong tham cao cap dow'
+            },
+            {
+                id: 'a100',
+                name: 'Apollo Acrylic A100',
+                code: 'A100',
+                category: 'acrylic',
+                categoryLabel: 'Keo Acrylic',
+                badgeColor: 'bg-teal-600',
+                headerBg: 'from-teal-600 to-emerald-700',
+                svgIllustration: createCartridgeSVG('A100', '#0D9488', 'ACRYLIC SEALANT'),
+                tagline: 'Chất trám gốc nước chuyên dụng cho nội thất',
+                shortDesc: 'Chất trám gốc nước Acrylic một thành phần, dễ thi công, có thể sơn phủ sau khi khô, chuyên dùng cho các hạng mục nội thất.',
+                specs: {
+                    'Hệ lưu hóa': 'Acrylic gốc nước',
+                    'Dung tích': '300ml / chai',
+                    'Đóng gói': '25 chai / thùng',
+                    'Sơn phủ': 'Sơn phủ được sau khi khô'
+                },
+                features: [
+                    'Chất trám gốc nước, thân thiện với môi trường',
+                    'Bám dính tốt trên hầu hết vật liệu xây dựng nội thất',
+                    'Bề mặt mịn, dễ dàng sơn phủ lên sau khi lưu hóa',
+                    'Không gây ố màu, không ăn mòn bề mặt'
+                ],
+                applications: [
+                    'Trám khe hở đường ống xuyên tường',
+                    'Trám khe hở khung cửa, chân tường',
+                    'Xử lý vết nứt nhỏ trên tường, trần thạch cao, gạch ngói'
+                ],
+                keywords: 'acrylic a100 noi that duong ong khe ho cua tuong gach ngoi goc nuoc'
+            },
+            {
+                id: 'a200',
+                name: 'Apollo Silicone A200',
+                code: 'A200',
+                category: 'acid',
+                categoryLabel: 'Keo Acid',
+                badgeColor: 'bg-sky-600',
+                headerBg: 'from-sky-600 to-blue-700',
+                svgIllustration: createCartridgeSVG('A200', '#0284C7', 'ACID SEALANT'),
+                tagline: 'Keo silicone lưu hóa axit đa dụng',
+                shortDesc: 'Chất trám silicone lưu hóa axit có độ đàn hồi và độ bám dính cao, chống chịu thời tiết khắc nghiệt rất tốt.',
+                specs: {
+                    'Hệ lưu hóa': 'Axit (Acetoxy)',
+                    'Dung tích': '300ml / chai',
+                    'Đóng gói': '25 chai / thùng',
+                    'Đặc tính': 'Khô nhanh, không chảy xệ'
+                },
+                features: [
+                    'Lưu hóa axit nhanh, tiết kiệm thời gian thi công',
+                    'Độ đàn hồi và độ bám dính cao',
+                    'Chống chịu tốt tia UV, mưa nắng và biến đổi nhiệt độ',
+                    'Không bị võng hay chảy xệ khi thi công khe đứng'
+                ],
+                applications: [
+                    'Trám trét khung kính và cửa nhôm thông dụng',
+                    'Lắp đặt vách kính, tủ kính nội ngoại thất',
+                    'Bịt kín mối nối các vật liệu không rỗ xốp'
+                ],
+                keywords: 'acid a200 kinh nhom dan hoi bam dinh thoi tiet'
+            },
+            {
+                id: 'primer',
+                name: 'Hệ thống Sơn lót (Primer)',
+                code: 'PRIMER',
+                category: 'dowsil',
+                categoryLabel: 'Sơn Lót Tăng Bám Dính',
+                badgeColor: 'bg-indigo-700',
+                headerBg: 'from-indigo-700 to-purple-900',
+                svgIllustration: createCartridgeSVG('PRIMER', '#4F46E5', 'SURFACE PRIMER', true),
+                tagline: 'Primer C-OS, 1200-OS, MT',
+                shortDesc: 'Hệ thống sơn lót chuyên dụng giúp tăng cường tối đa độ bám dính của keo silicone trên các bề mặt rỗ xốp và không rỗ xốp.',
+                specs: {
+                    'Mã sản phẩm': '1200-OS, C-OS, MT',
+                    'Bề mặt rỗ xốp': '1200-OS / Primer P',
+                    'Không rỗ xốp': 'C-OS / Primer MT',
+                    'Công dụng': 'Tăng bám dính hóa học'
+                },
+                features: [
+                    'Primer 1200-OS: Tăng bám dính cho bề mặt rỗ xốp và kim loại',
+                    'Primer C-OS & MT: Tối ưu cho bề mặt không rỗ xốp, sơn phủ',
+                    'Khô nhanh, dễ thi công bằng cọ hoặc khăn sạch',
+                    'Ngăn ngừa hiện tượng bong tróc mối nối dưới tác động ẩm ướt'
+                ],
+                applications: [
+                    'Xử lý bề mặt bê tông, vữa, gỗ trước khi bắn keo',
+                    'Xử lý bề mặt kính phủ, nhôm sơn tĩnh điện, inox, nhựa',
+                    'Bắt buộc cho các mối nối kết cấu quan trọng và khe ngâm nước'
+                ],
+                keywords: 'son lot primer c-os 1200-os mt bam dinh be mat ro xop khong ro xop be tong kinh kim loai'
+            }
+        ];
+
+        let currentCategory = 'all';
+        let currentSearch = '';
+
+        // Bỏ dấu tiếng Việt để tìm kiếm chính xác hơn (VD: "kinh" tìm ra "kính")
+        function normalizeVi(str) {
+            return (str || '')
+                .toLowerCase()
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .replace(/đ/g, 'd');
+        }
+
+        // Cập nhật số lượng trên các tab danh mục
+        function updateCategoryCounts() {
+            const counts = { all: productsData.length, acrylic: 0, acid: 0, oxime: 0, foam: 0, dowsil: 0 };
+            productsData.forEach(p => { if (counts[p.category] !== undefined) counts[p.category]++; });
+            Object.keys(counts).forEach(cat => {
+                const el = document.getElementById('count-' + cat);
+                if (el) el.textContent = `(${counts[cat]})`;
+            });
+        }
+
+        // 2. Render danh sách sản phẩm trưng bày
+        function renderProducts() {
+            const grid = document.getElementById('product-grid');
+            const emptyState = document.getElementById('empty-state');
+            const counter = document.getElementById('result-counter');
+
+            const searchNorm = normalizeVi(currentSearch.trim());
+
+            const filtered = productsData.filter(item => {
+                const matchCat = currentCategory === 'all' || item.category === currentCategory;
+                const matchSearch = !searchNorm ||
+                    normalizeVi(item.name).includes(searchNorm) ||
+                    normalizeVi(item.code).includes(searchNorm) ||
+                    normalizeVi(item.shortDesc).includes(searchNorm) ||
+                    normalizeVi(item.tagline).includes(searchNorm) ||
+                    normalizeVi(item.keywords).includes(searchNorm);
+                return matchCat && matchSearch;
+            });
+
+            counter.textContent = `Hiển thị ${filtered.length} / ${productsData.length} sản phẩm`;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            grid.innerHTML = filtered.map(product => {
+                const visualStage = product.image
+                    ? `<img src="${product.image}" alt="${product.name}" loading="lazy" class="w-full h-full ${product.imageFit || 'object-cover'} group-hover:scale-105 transition-transform duration-500">`
+                    : `<div class="w-full h-full group-hover:scale-105 transition-transform duration-500">${product.svgIllustration}</div>`;
+
+                const specEntries = Object.entries(product.specs).slice(0, 2);
+
+                return `
+                <article class="group bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden">
+                    <!-- Product Image Stage -->
+                    <div onclick="openProductModal('${product.id}')" class="relative h-56 bg-slate-100 overflow-hidden cursor-pointer border-b border-slate-100">
+                        ${visualStage}
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg ${product.badgeColor} text-white text-[11px] font-bold uppercase tracking-wider shadow-sm">
+                            ${product.categoryLabel}
+                        </span>
+                        <span class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-slate-900/75 backdrop-blur-sm text-white text-[11px] font-extrabold tracking-wide">
+                            ${product.code}
+                        </span>
+                    </div>
+
+                    <!-- Card Content -->
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 onclick="openProductModal('${product.id}')" class="text-lg font-extrabold text-[#003B73] group-hover:text-[#0056A6] transition-colors cursor-pointer">
+                                ${product.name}
+                            </h3>
+                            <p class="text-xs font-semibold text-[#D9232E] mt-0.5 mb-2.5">${product.tagline}</p>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-3">
+                                ${product.shortDesc}
+                            </p>
+
+                            <!-- Quick Specs Pills -->
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                ${specEntries.map(([k, v]) => `
+                                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-[11px] font-medium">
+                                        <span class="text-slate-400">${k}:</span> <strong>${v}</strong>
+                                    </span>
+                                `).join('')}
+                            </div>
+
+                            <!-- Highlight Applications -->
+                            <div class="mb-5">
+                                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Ứng dụng tiêu biểu</div>
+                                <ul class="space-y-1.5">
+                                    ${product.applications.slice(0, 2).map(app => `
+                                        <li class="flex items-start gap-2 text-xs text-slate-700">
+                                            <i class="fa-solid fa-circle-check text-[#0056A6] mt-0.5 shrink-0"></i>
+                                            <span>${app}</span>
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Card Actions (Showcase only, no cart) -->
+                        <div class="pt-4 border-t border-slate-100 flex items-center gap-2.5">
+                            <button onclick="openProductModal('${product.id}')" class="flex-1 py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-[#003B73] text-slate-700 hover:text-white text-xs sm:text-sm font-semibold transition-colors flex items-center justify-center gap-1.5">
+                                <i class="fa-solid fa-eye"></i>
+                                <span>Xem chi tiết</span>
+                            </button>
+                            <button onclick="openQuoteModal('${product.name}')" class="flex-1 py-2.5 px-3 rounded-xl bg-[#D9232E]/10 hover:bg-[#D9232E] text-[#D9232E] hover:text-white text-xs sm:text-sm font-semibold transition-colors flex items-center justify-center gap-1.5">
+                                <i class="fa-solid fa-phone-volume"></i>
+                                <span>Báo giá</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                `;
+            }).join('');
+        }
+
+        // 3. Xử lý lọc danh mục & tìm kiếm
+        document.querySelectorAll('.cat-tab').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.cat-tab').forEach(b => {
+                    b.classList.remove('bg-[#003B73]', 'text-white', 'shadow-md');
+                    b.classList.add('bg-white', 'text-slate-600', 'border', 'border-slate-200');
+                });
+                btn.classList.remove('bg-white', 'text-slate-600', 'border', 'border-slate-200');
+                btn.classList.add('bg-[#003B73]', 'text-white', 'shadow-md');
+
+                currentCategory = btn.getAttribute('data-category');
+                renderProducts();
+            });
+        });
+
+        const searchInput = document.getElementById('product-search');
+        const clearBtn = document.getElementById('clear-search-btn');
+
+        searchInput.addEventListener('input', (e) => {
+            currentSearch = e.target.value;
+            clearBtn.classList.toggle('hidden', !currentSearch);
+            renderProducts();
+        });
+
+        function clearSearch() {
+            currentSearch = '';
+            searchInput.value = '';
+            clearBtn.classList.add('hidden');
+            renderProducts();
+        }
+
+        function resetFilters() {
+            currentCategory = 'all';
+            clearSearch();
+            document.querySelector('[data-category="all"]').click();
+        }
+
+        // 4. Xử lý Chuyển Tab Kỹ thuật thi công
+        function switchTechTab(tabId) {
+            document.querySelectorAll('.tech-tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(tabId).classList.remove('hidden');
+
+            document.querySelectorAll('.tech-tab-btn').forEach(btn => {
+                btn.classList.remove('bg-[#003B73]', 'text-white', 'shadow-md');
+                btn.classList.add('bg-white', 'border', 'border-slate-200', 'text-slate-600');
+            });
+
+            const activeBtn = document.getElementById('btn-' + tabId);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'border', 'border-slate-200', 'text-slate-600');
+                activeBtn.classList.add('bg-[#003B73]', 'text-white', 'shadow-md');
+            }
+        }
+
+        // 5. Modal Chi tiết sản phẩm (có Gallery ảnh & Thông số)
+        function setModalActiveImage(src, caption, fitClass) {
+            const stage = document.getElementById('modal-image-stage');
+            stage.innerHTML = `
+                <img src="${src}" alt="${caption}" onclick="openLightbox('${src}', '${caption.replace(/'/g, "\\'")}')"
+                     class="w-full h-full ${fitClass || 'object-contain bg-white'} cursor-zoom-in">
+                <button onclick="openLightbox('${src}', '${caption.replace(/'/g, "\\'")}')"
+                        class="absolute bottom-2.5 right-2.5 px-2.5 py-1 rounded-lg bg-slate-900/70 hover:bg-slate-900 text-white text-[11px] font-semibold flex items-center gap-1 transition-colors">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i> Phóng to
+                </button>
+            `;
+        }
+
+        function openProductModal(productId) {
+            const product = productsData.find(p => p.id === productId);
+            if (!product) return;
+
+            const modal = document.getElementById('product-modal');
+            const headerBar = document.getElementById('modal-header-bar');
+            headerBar.className = `p-5 sm:p-6 text-white flex items-start justify-between bg-gradient-to-r ${product.headerBg}`;
+
+            document.getElementById('modal-category-badge').textContent = product.categoryLabel;
+            document.getElementById('modal-title').textContent = product.name;
+            document.getElementById('modal-subtitle').textContent = product.tagline;
+            document.getElementById('modal-desc').textContent = product.shortDesc;
+
+            // Render Image Gallery or SVG
+            const stage = document.getElementById('modal-image-stage');
+            const thumbs = document.getElementById('modal-thumbs');
+
+            if (product.gallery && product.gallery.length > 0) {
+                setModalActiveImage(product.gallery[0].src, product.gallery[0].caption, product.imageFit);
+                if (product.gallery.length > 1) {
+                    thumbs.classList.remove('hidden');
+                    thumbs.innerHTML = product.gallery.map((img, idx) => `
+                        <button type="button" onclick="selectGalleryThumb(this, '${img.src}', '${img.caption.replace(/'/g, "\\'")}')"
+                                class="thumb-btn w-16 h-14 rounded-lg overflow-hidden border-2 ${idx === 0 ? 'border-[#0056A6]' : 'border-slate-200'} bg-white shrink-0 hover:border-[#0056A6] transition-all">
+                            <img src="${img.src}" alt="${img.caption}" class="w-full h-full object-cover">
+                        </button>
+                    `).join('');
+                } else {
+                    thumbs.innerHTML = '';
+                    thumbs.classList.add('hidden');
+                }
+            } else {
+                stage.innerHTML = `<div class="w-full h-full">${product.svgIllustration}</div>`;
+                thumbs.innerHTML = '';
+                thumbs.classList.add('hidden');
+            }
+
+            // Render Specs
+            document.getElementById('modal-specs').innerHTML = Object.entries(product.specs).map(([k, v]) => `
+                <div class="bg-white rounded-lg p-2 border border-slate-100">
+                    <dt class="text-[10px] font-bold uppercase text-slate-400">${k}</dt>
+                    <dd class="font-bold text-slate-800 mt-0.5">${v}</dd>
+                </div>
+            `).join('');
+
+            // Render Features & Apps
+            document.getElementById('modal-features').innerHTML = product.features.map(f =>
+                `<li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-1 text-xs shrink-0"></i><span>${f}</span></li>`
+            ).join('');
+
+            document.getElementById('modal-apps').innerHTML = product.applications.map(a =>
+                `<li class="flex items-start gap-2"><i class="fa-solid fa-angle-right text-[#0056A6] mt-1 text-xs shrink-0"></i><span>${a}</span></li>`
+            ).join('');
+
+            document.getElementById('modal-quote-btn').onclick = () => {
+                closeProductModal();
+                openQuoteModal(product.name);
+            };
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function selectGalleryThumb(btn, src, caption) {
+            document.querySelectorAll('.thumb-btn').forEach(b => {
+                b.classList.remove('border-[#0056A6]');
+                b.classList.add('border-slate-200');
+            });
+            btn.classList.remove('border-slate-200');
+            btn.classList.add('border-[#0056A6]');
+            setModalActiveImage(src, caption, 'object-contain bg-white');
+        }
+
+        function closeProductModal() {
+            const modal = document.getElementById('product-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        // 6. Modal Báo giá & Toast Notification
+        function openQuoteModal(productName) {
+            const modal = document.getElementById('quote-modal');
+            document.getElementById('quote-product').value = productName || '';
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeQuoteModal() {
+            const modal = document.getElementById('quote-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('quote-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('quote-name').value.trim();
+            const product = document.getElementById('quote-product').value.trim();
+
+            closeQuoteModal();
+            this.reset();
+
+            showToast(`Cảm ơn ${name}! Yêu cầu báo giá ${product ? '(' + product + ')' : ''} đã được ghi nhận.`);
+        });
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').textContent = message;
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+
+            setTimeout(() => {
+                toast.classList.add('hidden');
+                toast.classList.remove('flex');
+            }, 4500);
+        }
+
+        // 7. Image Lightbox
+        function openLightbox(src, caption) {
+            const lb = document.getElementById('lightbox-modal');
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-img').alt = caption || '';
+            document.getElementById('lightbox-caption').textContent = caption || '';
+            lb.classList.remove('hidden');
+            lb.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lb = document.getElementById('lightbox-modal');
+            lb.classList.add('hidden');
+            lb.classList.remove('flex');
+            if (document.getElementById('product-modal').classList.contains('hidden')) {
+                document.body.style.overflow = '';
+            }
+        }
+
+        // 8. Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+        document.getElementById('mobile-menu-btn').addEventListener('click', toggleMobileMenu);
+
+        // Đóng modal khi bấm ra ngoài nền tối hoặc nhấn ESC
+        window.addEventListener('click', (e) => {
+            if (e.target === document.getElementById('product-modal')) closeProductModal();
+            if (e.target === document.getElementById('quote-modal')) closeQuoteModal();
+            if (e.target === document.getElementById('lightbox-modal')) closeLightbox();
+        });
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (!document.getElementById('lightbox-modal').classList.contains('hidden')) {
+                    closeLightbox();
+                } else {
+                    closeProductModal();
+                    closeQuoteModal();
+                }
+            }
+        });
+
+        // Khởi tạo dữ liệu lần đầu
+        updateCategoryCounts();
+        renderProducts();
+    </script>
+</body>
+</html>
